@@ -25,6 +25,8 @@ class Product{
       map["id"] = id;
     }
 
+    return map;
+
   }
 
   //Parametre olarak dinamik bir şekilde veri olarak map gelecek. Bizde onu objeye atacağız
@@ -32,7 +34,7 @@ class Product{
     this.id = int.tryParse(o["id"]);//Gelen veriyi inte çevirir
     this.name= o["name"];
     this.description=o["descriptipn"];
-    this.unitPrice=double.tryParse(o["unitPrice"]);//Gelen veriyi double'a çevirir
+    this.unitPrice=double.tryParse(o["unitPrice"].toString());//Gelen veriyi double'a çevirir
 
   }
 }
